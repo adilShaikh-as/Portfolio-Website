@@ -126,26 +126,6 @@ nav{
 
 @media (max-width:768px){
 
-nav{
-
-    flex-direction:column;
-
-    gap:15px;
-
-    padding:15px;
-
-}
-
-nav ul{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:15px;
-
-}
-
 section{
 
     padding:80px 5%;
@@ -352,7 +332,7 @@ section h2{
 @media (max-width:768px){
 
     #home{
-        padding-top:150px;
+        padding-top:110px;
     }
 
 }
