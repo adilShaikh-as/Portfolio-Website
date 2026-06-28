@@ -7,6 +7,12 @@
     scroll-behavior:smooth;
 }
 
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
 body{
     background:#f8fafc;
     color:#1e293b;
@@ -70,7 +76,9 @@ nav ul li a:hover::after{
 /* Sections */
 
 section{
-    padding:100px 10%;
+    width:100%;
+    max-width:100%;
+    padding:100px 8%;
 }
 
 /* Hero Section */
@@ -587,20 +595,38 @@ footer{
 
 .contact-form input,
 .contact-form textarea{
+
+    width:100%;
+    max-width:100%;
+
     padding:15px;
+
     border:1px solid #dbeafe;
+
     border-radius:10px;
+
     font-size:16px;
+
 }
 
 .contact-form button{
+
+    width:100%;
+
     padding:15px;
+
     border:none;
+
     border-radius:10px;
+
     background:#2563eb;
+
     color:white;
+
     cursor:pointer;
+
     font-size:16px;
+
 }
 
 .footer-icons{
@@ -980,7 +1006,11 @@ img{
 
 }
 
-@media(max-width:768px){
+/* FIX: changed breakpoint from 768px to 992px so tablets
+   (e.g. iPad portrait, small laptop windows) also get the
+   collapsible hamburger menu instead of squeezing 8 nav
+   links into one row and breaking layout. */
+@media(max-width:992px){
 
     nav{
 
@@ -990,7 +1020,7 @@ img{
 
         align-items:center;
 
-        padding:18px 20px;
+        padding:18px 5%;
 
     }
 
@@ -1090,3 +1120,53 @@ img{
 
 }
 
+img{
+    max-width:100%;
+    display:block;
+}
+
+footer{
+    width:100%;
+    background:#0f172a;
+    color:#fff;
+    padding:50px 20px;
+    text-align:center;
+    overflow:hidden;
+}
+
+footer h3{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+footer p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.footer-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin:25px 0;
+}
+
+.footer-icons a{
+    color:#fff;
+    text-decoration:none;
+    font-size:34px;
+    transition:.3s;
+}
+
+.footer-icons a:hover{
+    color:#2563eb;
+    transform:translateY(-4px);
+}
+
+.contact-item p,
+.contact-item a{
+    overflow-wrap:anywhere;
+    word-break:break-word;
+}
